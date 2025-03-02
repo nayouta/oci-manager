@@ -1,17 +1,26 @@
 variable "tenancy_ocid" {
-  type = string
+  type      = string
+  sensitive = true
 }
 
 variable "user_ocid" {
-  type = string
+  type      = string
+  sensitive = true
+}
+
+variable "private_key" {
+  type      = string
+  sensitive = true
 }
 
 variable "private_key_path" {
-  type = string
+  type      = string
+  sensitive = true
 }
 
 variable "fingerprint" {
-  type = string
+  type      = string
+  sensitive = true
 }
 
 variable "region" {
