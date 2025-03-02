@@ -1,3 +1,14 @@
+terraform {
+  cloud {
+    organization = "nayouta"
+    hostname = "app.terraform.io"
+
+    workspaces {
+      name = "oci-manager"
+    }
+  }
+}
+
 provider "oci" {
   tenancy_ocid = var.tenancy_ocid
   user_ocid    = var.user_ocid
