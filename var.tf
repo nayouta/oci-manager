@@ -13,10 +13,10 @@ variable "private_key" {
   sensitive = true
 }
 
-variable "private_key_path" {
-  type      = string
-  sensitive = true
-}
+# variable "private_key_path" {
+#   type      = string
+#   sensitive = true
+# }
 
 variable "fingerprint" {
   type      = string
@@ -28,7 +28,8 @@ variable "region" {
 }
 
 variable "compartment_id" {
-  type = string
+  type      = string
+  sensitive = true
 }
 
 variable "container_instance_vnic_display_name" {
