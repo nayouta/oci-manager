@@ -55,23 +55,28 @@ variable "security_list_display_name" {
 }
 
 variable "ingress_protocol" {
-  type = list(string)
+  type    = list(string)
+  default = ["1"]
 }
 
 variable "ingress_protocol_tcp" {
-  type = string
+  type    = string
+  default = "6"
 }
 
 variable "ingress_source_cidr_block" {
-  type = string
+  type    = string
+  default = "0.0.0.0/0"
 }
 
 variable "egress_protocol" {
-  type = list(string)
+  type    = list(string)
+  default = ["6"]
 }
 
 variable "egress_source_cidr_block" {
-  type = string
+  type    = string
+  default = "0.0.0.0/0"
 }
 
 variable "route_table_display_name" {
@@ -91,5 +96,6 @@ variable "internet_gateway_display_name" {
 }
 
 variable "internet_gateway_enabled" {
-  type = bool
+  type    = bool
+  default = true
 }
